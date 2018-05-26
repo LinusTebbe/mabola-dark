@@ -8,5 +8,6 @@ move it into the skins folder of roundcube<br>
 extract the zip<br>
 rename the extracted folder to "mabola"<br>
 remove the zip<br>
+choose "mabola" in the roundcube's settings<br>
 <br>
 you're done, enjoy your new material styled dark theme
