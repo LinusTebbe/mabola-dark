@@ -1,8 +1,8 @@
 # mabola-dark
 Basically the mabola skin (https://github.com/EstudioNexos/mabola), but dark
 
-## How to install
 
+## How to install
 Just download the zip: https://github.com/ZordoPlayz/mabola-dark/archive/master.zip<br>
 move it into the skins folder of roundcube<br>
 extract the zip<br>
