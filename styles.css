@@ -1,0 +1,918 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #f5f5f5 none no-repeat scroll center top;
+    color: #212121;
+    font-family: "RobotoDraft","Roboto",sans-serif;
+}
+
+#header {
+min-height:115px;
+background:#fff;
+box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.12);
+}
+.minimal #header {min-height:105px;}
+
+#logo, #toplogo {display:none;}
+
+#login-form .box-inner {
+    background:#666 url("/skins/mabola/images/logo-medium-mabola.png") no-repeat scroll center 14px;
+    border: 0px solid #333;
+    border-radius: 0px;
+    box-shadow: none;
+    margin: 0 50px;
+    padding: 140px 24px 24px;
+    width: 430px;
+}
+
+#login-form td.title {
+    color: #eee;
+    text-align: right;
+    text-shadow: none;
+    white-space: nowrap;
+}
+
+#login-form input[type="text"], #login-form input[type="password"] {
+    border-color: transparent;
+    color: #fff
+}
+
+#login-form .box-bottom {
+    background: transparent none no-repeat scroll center top;
+    margin-top: -3px;
+    padding-top: 10px;
+}
+
+#login-form {
+    padding-top:200px;
+    padding-bottom: 100px;
+    margin: 0 auto 2ex;
+    position: relative;
+    width: 580px;
+}
+
+#topline {
+    background: #000 none repeat scroll 0 0;
+    border-bottom: 0px solid #eee;
+    color: #fff;
+}
+
+
+.minimal #topline {
+    background-color: #000;
+}
+
+.minimal #taskbar .button-inner {
+    text-indent:0px;
+    height:auto!important;
+    width:auto!important;
+    margin-top:-5px;
+    top:-5px;
+}
+
+#topnav {
+    background: #242424 none repeat scroll 0 0;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.26);
+    background-image: url("images/logo-mabola.png");
+    background-position: 0.5% center;
+    background-repeat: no-repeat;
+   background-size: 36px auto;
+}
+
+#mainscreen {
+    bottom: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 73px;
+}
+
+#mainscreencontent {
+    bottom: 0;
+    left: 0;
+    margin: 2ex 2ex 0;
+    position: absolute;
+    right: 0;
+    top: 42px;
+}
+
+#topline a.button-logout {
+    color: #fff;
+    background:rgba(0, 0, 0, 0) url("images/buttons.png") no-repeat scroll -6px -193px;
+}
+
+#mailview-right {
+    background-repeat: repeat-x;
+    bottom: 0;
+    left: 212px;
+    padding-top: 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+#mailview-right #messageheader {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 6px 20px -2px rgba(0, 0, 0, 0.3);
+    max-height: 50%;
+    overflow: auto;
+    padding-left: 78px;
+    z-index: 9000;
+}
+
+#messagecontent {
+    padding-top: 20px;
+}
+
+#topline .topleft a {
+color:#fff;
+}
+
+#taskstoolbar,
+#addressbooktoolbar,
+#messagetoolbar {
+    background-color: #fff;
+    height: 42px;
+    /*position: relative;*/
+    top: 0;
+    /*box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);*/
+}
+#messagesearchtools {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 25;
+}
+
+.minimal #taskbar a.button-selected,
+#taskbar a.button-selected {
+    background-color: transparent;
+    color: #3cf;
+}
+
+#taskbar {
+    float: none;
+    padding-left: 60px;
+    padding-right: 18px;
+    padding-top: 14px;
+    position: relative;
+    line-height: 3;
+}
+
+.minimal #taskbar a span.button-inner,
+#taskbar a span.button-inner {
+    background: rgba(0, 0, 0, 0) none no-repeat scroll -1000px 0 !important;
+    /*display: none;*/
+    font-size: 110%;
+    font-weight: normal;
+    height: 19px;
+    padding: 5px 0 0 0;
+    text-shadow: none;
+}
+
+#topline a, #topnav a {
+    color: #fff;
+}
+
+.uibox {
+    background: #fff none repeat scroll 0 0;
+    /*border: 0px solid #a3a3a3;*/
+    border: 1px solid #ececec;
+    border-radius: 0px;
+    border-width: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+}
+
+table.records-table {
+border: none !important;
+}
+
+table.records-table thead tr {
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.3);
+}
+
+.records-table td {
+border-left: none !important;
+border-right: none !important;
+padding: 8px 3px !important;
+}
+
+.records-table thead tr th {
+    background-color: #fff !important;
+   border-left: medium none;
+    border-right: medium none;
+}
+
+.records-table thead th, .records-table thead td {
+    background: transparent none repeat scroll 0 0;
+}
+
+.records-table thead th a, .records-table thead td a, .records-table thead th span, .records-table thead td span {
+    background-color: #fff !important;
+    border: none;
+    color: #bbb;
+    display: block;
+    overflow: hidden;
+    padding: 7px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+}
+
+.records-table thead th, .records-table thead td {
+    background-color: #fff !important;
+}
+
+#messagelistfooter {
+    background: #eee none repeat scroll 0 0;
+    border-radius: 0;
+}
+
+input[type="text"], input[type="password"], textarea, select {
+    border-bottom: 0px solid #b2b2b2;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.searchbox input, #quicksearchbar input {
+    background: #fff none repeat scroll 0 0;
+    border-color: #eee;
+    border-bottom: 1px solid #b2b2b2;
+    padding: 3px 30px 7px 34px;
+}
+
+.toolbar a.button {
+    background-image: url(images/buttons.png);
+    border: 0 none;
+    border-radius: 0;
+    box-shadow: none;
+    color: transparent;
+    font-size: 10px;
+    height: 13px;
+    max-width: 70px;
+    min-width: 50px;
+    overflow: hidden;
+    padding: 22px 2px 0;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-shadow: none;
+    white-space: nowrap;
+}
+
+.listbox .listitem.selected, .listbox .tablink.selected, .listbox .listitem.selected > a, .listbox .tablink.selected > a, .listing tbody tr.selected td, .listing li.selected, .listing li.selected > a {
+    background-color: #2f2f2f;
+    color: #fff;
+    font-weight: bold;
+}
+.listbox .listitem, .listbox .tablink, .listing tbody td, .listing li {
+    border-bottom: 0px solid #bbd3da;
+    border-top: 0px solid #fff;
+}
+.listbox .listitem a, .listbox .listitem span, .listbox .tablink a, .listing tbody td, .listing li a {
+    color: #000;
+    text-shadow: none;
+}
+
+ul.listing li {
+    background-color: #fff;
+}
+
+
+.folderlist li.mailbox.selected > a .unreadcount {
+    background: transparent none repeat scroll 0 0;
+    box-shadow: none;
+    color: #fff;
+}
+
+
+.folderlist li.mailbox .unreadcount {
+    background: transparent none repeat scroll 0 0;
+    border-radius: 0px;
+    box-shadow: none;
+    color: #000;
+}
+
+
+.uibox .boxfooter {
+    border-radius: 0;
+}
+
+.listbox .boxfooter {
+    background: #eee none repeat scroll 0 0;
+    border-top: 0 solid #ccdde4;
+}
+
+.uibox .boxfooter .listbutton:first-child {
+    border-radius: 0;
+}
+.boxfooter .listbutton {
+    background: transparent none repeat scroll 0 0;
+    border-right: 0 solid #fff;
+}
+
+.boxfooter .listbutton .inner {
+    background-image: url("images/buttons.png");
+}
+
+.records-table.focus tr.selected td, .records-table tr.selected td {
+    background: #ffc none repeat scroll 0 0 !important;
+    color: #aaa !important;
+}
+.records-table tr.selected td a, .records-table tr.selected td span {
+    color: #aaa !important;
+}
+
+a.menuselector {
+    background: #eee none repeat scroll 0 0;
+    border-bottom: 1px solid #b2b2b2;
+    border-top: medium none;
+    border-left: medium none;
+    border-right: medium none;
+    border-radius: 0;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+a.menuselector .handle {
+    background: #fff none no-repeat scroll right center;
+    border-radius: 0;
+    display: inline-block;
+    height: 20px;
+    line-height: 19px;
+    padding: 0 32px 0 6px;
+    text-shadow: none;
+}
+
+#messageheader, #composeheaders {
+    background: transparent none repeat-x scroll 0 0;
+}
+
+#composeheaders {
+    border-bottom: 0 solid #dfdfdf;
+    padding-top: 20px;
+}
+
+#messageheader {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 6px 20px -2px rgba(0, 0, 0, 0.3);
+    max-height: 50%;
+    overflow: auto;
+    padding-left: 78px;
+    z-index: 9000;
+}
+
+#composeheaders {
+    border-radius: 0;
+    padding-left: 19px;
+}
+
+.moreheaderstoggle {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 0;
+    border-right: 0 solid #dfdfdf;
+}
+
+
+#messageheader.previewheader {
+    background: #fff url("images/borde.png") repeat-x scroll 0 0;
+    height: auto;
+    min-height: 52px;
+    padding: 12px 0 3px 72px;
+    position: relative;
+}
+
+#messagecontent .rightcol, #messagepreview .rightcol {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+    min-height: auto;
+}
+
+
+input.button.mainaction,
+.formbuttons input.button,
+input.button,
+.pagenav.dark a.button,
+.pagenav a.button,
+a.button, .buttongroup {
+    background: #eee none repeat scroll 0 0;
+    border: none medium;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    will-change: box-shadow, transform;
+    color: #525252;
+    text-shadow: none;
+}
+
+input.button.mainaction:hover {
+    color: #828282;
+}
+
+.pagenav .pagejumper {
+    background: transparent none repeat scroll 0 0;
+}
+
+.minimal #taskbar a.button-selected,
+#taskbar a.button-selected {
+    border-bottom: 2px solid #E15349;
+    color: #E15349;
+}
+
+#taskbar .minmodetoggle {
+    background: rgba(0, 0, 0, 0) url("images/buttons.png") no-repeat scroll -35px -1778px;
+}
+
+
+.dropbutton .dropbuttontip {
+    background: rgba(0, 0, 0, 0) url("images/buttons.png") no-repeat scroll 0 -1255px;
+}
+
+.minimal #taskbar a,
+#taskbar a {
+    display: inline-block;
+   color: #fff;
+   display: inline-block;
+    height: 26px;
+    padding: 0 6px 6px;
+}
+}
+
+.topright {
+    float: none;
+    position: absolute;
+}
+
+.toolbar a.button:focus {
+    border-radius: 0;
+    background-color: unset;
+    text-shadow: none;
+
+}
+
+.buttongroup a.button.selected, .buttongroup a.button.selected:hover {
+    background: #aaa none repeat scroll 0 0;
+    border: 1px solid #c6c6c6;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#compose-contacts #directorylist {
+    border-bottom: 0px solid #fff;
+}
+
+.listsearchbox {
+    background: #fff none repeat scroll 0 0;
+}
+
+.uibox .boxtitle, .uibox .listing thead th, .uibox .listing thead td {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 0;
+    color: #222;
+}
+
+.boxtitle, .uibox .listing thead th, .uibox .listing thead td {
+    border-bottom: 0px solid #bbd3da;
+}
+
+
+.folderlist li.mailbox.recent > a .unreadcount {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: none;
+}
+
+#folder-selector li a span {
+    background: #fff none repeat scroll 0 0;
+}
+
+.folderlist li.recent > a {
+    color: #222;
+}
+
+.messagelist tr > .attachment, .messagelist tr > .threads, .messagelist tr > .status, .messagelist tr > .flag, .messagelist tr > .priority {
+    padding: 0;
+}
+
+
+.folderlist li.mailbox a {
+    background-image: none;
+    background-position: 6px 3px;
+    padding-left: 16px;
+}
+
+.folderlist li.mailbox ul li a {
+    padding-left: 32px;
+}
+
+.folderlist li.mailbox div.treetoggle {
+    left: 3px;
+    top: 7px;
+}
+
+
+.folderlist li.mailbox ul ul li.mailbox a {
+    padding-left: 45px;
+}
+
+.folderlist li.mailbox ul li div.treetoggle {
+    left: 18px;
+    top: 7px;
+}
+
+html.mozilla #mailboxlist > li:first-child {
+    border-radius: 0;
+}
+
+.popupmenu, #rcmKSearchpane {
+    background: #fff none repeat scroll 0 0;
+    border: none medium;
+    border-radius: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+}
+
+ul.toolbarmenu li span.icon, #rcmKSearchpane ul li i.icon {
+   background-image: url("images/listicons.png");
+   font-size: 12px;
+   min-height: 14px;
+   opacity: 1;
+   padding: 2px 6px 2px 32px;
+   text-decoration: none;
+}
+
+ul.toolbarmenu li a.icon {
+    color: #222;
+    padding: 2px 6px;
+}
+
+.googie_list td span, ul.toolbarmenu li a {
+    text-shadow: none;
+    font-size: 12px;
+    min-height: 14px;
+    padding: 6px 16px 6px 10px;
+    text-decoration: none;
+}
+
+.googie_list td span, ul.toolbarmenu li a.active {
+    color: #222;
+    cursor: default;
+}
+
+
+.googie_list td.googie_list_onhover, ul.toolbarmenu li a.active:hover, ul.toolbarmenu li a.active:focus, #rcmKSearchpane ul li.selected, #pagejump-selector ul li.selected, select.decorated option:hover, select.decorated option[selected="selected"] {
+    background: #eee none repeat scroll 0 0;
+    outline: 0 none;
+    text-shadow: none;
+}
+
+.popmenu a {
+    text-shadow: none !important;
+    color: #222;
+}
+
+.googie_list td, ul.toolbarmenu li, #rcmKSearchpane ul li {
+    border-bottom: medium none;
+    border-top: medium none !important;
+    color: #222;
+    margin: 0;
+    min-width: 130px;
+    white-space: nowrap;
+    font-size: 12px;
+    min-height: 14px;
+    text-decoration: none;
+}
+
+
+ul.toolbarmenu li label {
+    color: #222;
+    text-shadow: none;
+}
+
+select.decorated option {
+    background: #fff none repeat scroll 0 0;
+    border-color: #fff -moz-use-text-color #333;
+    border-image: none;
+    border-style: solid none;
+    border-width: 0;
+    color: #222;
+    cursor: default;
+    outline: 0 none;
+    text-shadow: none;
+    font-size: 12px;
+    min-height: 14px;
+    padding: 6px 16px 6px 10px;
+    text-decoration: none;
+}
+
+ul.proplist li, table.propform td {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 2px solid #fff;
+}
+
+#tasksview .buttonbar {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border-bottom: 0 none;
+    color: #222;
+}
+
+.contentbox .boxtitle, body.iframe .boxtitle {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 0 solid #ccc;
+    color: #222;
+}
+
+.listbox .listitem, .listbox .tablink, .listing tbody td, .listing li {
+    border-bottom: 0 solid #fff;
+    border-top: 0 solid #fff;
+    background-color: #fff;
+}
+/*
+#mailboxmenulink {
+    height: 40px;
+    min-width: 40px;
+    width: 40px;
+
+    border-radius: 50%;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    font-size: 24px;
+
+    line-height: normal;
+    margin: auto;
+
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    will-change: box-shadow, transform;
+}
+*/
+
+input[type="text"], input[type="password"], textarea, select,
+#quickaddinput, #quicksearchbox
+{
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(#009688, #009688), linear-gradient(#d2d2d2, #d2d2d2);
+    background-position: center bottom, center calc(100% - 1px);
+    background-repeat: no-repeat;
+    background-size: 0 2px, 100% 1px;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    float: none;
+    transition: background 0s ease-out 0s;
+    font-size: 14px;
+    height: auto !important;
+    line-height: 1.42857;
+    padding: 7px 0;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input.button:focus, textarea:focus, select:focus,
+#quickaddinput:focus
+ {
+    background-image: linear-gradient(#009688, #009688), linear-gradient(#d2d2d2, #d2d2d2);
+    background-size: 100% 2px, 100% 1px;
+    box-shadow: none !important;
+    outline: medium none;
+    transition-duration: 0.3s;
+    border-color: transparent !important;
+}
+
+.headers-table td.header, .ui-dialog-content.popup span.adr {
+    font-size: 12px;
+    font-weight: normal;
+    padding: 7px 0;
+}
+
+.headers-table td.header-title {
+    color: #bbb;
+}
+
+.ui-dialog {
+    background: #fff none repeat scroll 0 0;
+    border: 0 none !important;
+    border-radius: 0 !important;
+    box-shadow: 1px 1px 18px #666;
+    left: 0;
+    outline: 0 none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+}
+
+.ui-dialog .ui-button.ui-dialog-titlebar-close {
+ right: 0;
+    top: 0;
+}
+
+.contactfieldgroup legend {
+    background: transparent none repeat scroll 0 0;
+}
+
+.contactfieldgroup {
+    background: transparent none repeat scroll 0 0;
+}
+
+.contactfieldgroup .contactfieldcontent {
+    font-size: 14px;
+}
+
+a.iconlink {
+    background: rgba(0, 0, 0, 0) none no-repeat scroll -1000px 0;
+    color: #888;
+    display: inline-block;
+    padding: 2px 8px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.messagelist tr td div.collapsed, .messagelist tr td div.expanded, .messagelist tr > .threads .listmenu, .messagelist tr > .attachment span.attachment, .messagelist tr > .attachment span.report, .messagelist tr > .priority span.priority, .messagelist tr > .priority span.prio1, .messagelist tr > .priority span.prio2, .messagelist tr > .priority span.prio3, .messagelist tr > .priority span.prio4, .messagelist tr > .priority span.prio5, .messagelist tr > .flag span.flagged, .messagelist tr > .flag span.unflagged, .messagelist tr > .flag span.unflagged:hover, .messagelist tr > .status span.status, .messagelist tr > .status span.msgicon, .messagelist tr > .status span.deleted, .messagelist tr > .status span.unread, .messagelist tr > .status span.unreadchildren, .messagelist tr > .subject span.msgicon, .messagelist tr > .subject span.deleted, .messagelist tr > .subject span.unread, .messagelist tr > .subject span.replied, .messagelist tr > .subject span.forwarded, .messagelist tr > .subject span.unreadchildren {
+    background: rgba(0, 0, 0, 0) url("images/listicons.png") no-repeat scroll -100px 0;
+}
+
+a.button span.icon, .boxpagenav a.icon, .pagenav a.button span.inner {
+    background-image: url("images/buttons.png");
+}
+#compose-contacts li a, #contacts-table td {
+    background-image: url("images/listicons.png");
+}
+
+#sections-table tbody td, #sections-table .listitem span, #settings-sections .listitem a, #settings-sections .tablink a {
+    background-image: url("images/listicons.png");
+}
+
+.ui-widget-header {
+    background: #fff none repeat scroll 0 0;
+}
+
+.ui-widget-content {
+    background: #fff none repeat scroll 0 0;
+}
+.ui-tabs .ui-tabs-panel {
+    background: #fff none repeat scroll 0 0;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    background: #fff none repeat scroll 0 0;
+    border-right: 1px solid #fafafa;
+    border-top: 1px solid #fafafa;
+    color: #999;
+    display: inline-block;
+    font-size: 12px;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+    background: #eee none repeat scroll 0 0;
+    color: #000;
+}
+
+#messagestack
+    border-radius: 0px;
+    border: 1px solid #bbb;
+    color: #080808
+    text-shadow: none;
+
+    background: #ffffff;
+
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.3);
+}
+
+#messagestack {
+    position: absolute;
+    bottom: 20px;
+    right: 12px;
+    z-index: 50000;
+    width: auto;
+    height: auto;
+    max-height: 85%;
+    overflow-y: auto;
+    padding: 2px;
+}
+
+#messagestack div {
+    display: block;
+    position: relative;
+    width: 280px;
+    height: auto;
+    min-height: 16px;
+    margin: 3px 2px 5px 2px;
+    padding: 30px;
+    cursor: default;
+    font-size: 12px;
+    font-weight: bold;
+    color: #2B3240;
+    text-shadow: 0 0 0 transparent;
+
+    border: medium none;
+/*
+    border: 1px solid #E5E5E5;
+*/
+    border-radius: 0px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    transition: all 0.4s ease 0s;
+
+    background: #ffffff;
+   /* background: -moz-linear-gradient(top, rgba(64,64,64,0.85) 0%, rgba(48,48,48,0.9) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(64,64,64,0.85)), color-stop(100%,rgba(48,48,48,0.9)));
+    background: -webkit-linear-gradient(top, rgba(64,64,64,0.85) 0%, rgba(48,48,48,0.85) 100%);
+    background: -o-linear-gradient(top, rgba(64,64,64,0.85) 0%, rgba(48,48,48,0.85) 100%);
+    background: -ms-linear-gradient(top, rgba(64,64,64,0.85) 0%, rgba(48,48,48,0.85) 100%);
+    background: linear-gradient(to bottom, rgba(64,64,64,0.85) 0%, rgba(48,48,48,0.85) 100%);
+
+    box-shadow: 0 1px 4px 0 rgba(50,50,50,0.8), inset 0px 1px 0 0px #888;
+    webkit-box-shadow: 0 1px 4px 0 rgba(50,50,50,0.8), inset 0px 1px 0 0px #888;*/
+    background-color: #919191;
+    color: #ffffff;
+}
+
+#messagestack div:after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 4px;
+        width: 20px;
+        height: 24px;
+        background: none 0 7px no-repeat;
+}
+
+#messagestack div.error {
+        color: #fff;
+        background-color: #e51c23;
+}
+
+#messagestack div.error:after {
+       background-position: 0 -55px;
+}
+
+#messagestack div.warning {
+        color: #FFFFFF;
+        background-color: #ff9800;
+}
+
+#messagestack div.warning:after {
+        background-position: 0 -84px;
+}
+
+#messagestack div.confirmation {
+        color:#FFFFFF;
+        background-color: #4caf50;
+}
+
+#messagestack div.uploading:after,
+#messagestack div.loading:after {
+	top: 4px;
+	left: 6px;
+    background: url("images/ajaxloader.gif") 0px 4px no-repeat;
+}
+
+#tb_label_popuplink {
+    background-image: url("images/buttons.png");
+    background-position: center -2004px;
+    height: 13px;
+    margin: 0 5px;
+    padding: 28px 2px 0;
+    width: 32px;
+}
