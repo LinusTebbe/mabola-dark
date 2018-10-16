@@ -1,5 +1,5 @@
 # mabola-dark
-Basically the mabola skin (https://github.com/EstudioNexos/mabola), but dark
+Basically the mabola skin (https://github.com/EstudioNexos/mabola), but instead dark
 
 
 ## How to install
